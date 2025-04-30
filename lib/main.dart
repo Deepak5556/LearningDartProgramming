@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
 
+void map() {
+  final person = {
+    'name': 'Deepak',
+    'dept': 'IT',
+    'college': 'KCE',
+    'Place': 'Coimbatore',
+    'age': 20,
+  };
+  print(person);
+  person['name'] = 'Deepakkumar';
+  person['phonenumber'] = 9876543210;
+  print(person);
+}
+
+void set() {
+  const name = {'deepak', 7};
+  print(name);
+}
+
 void arr() {
   final array = ['Deepak', 'Divit'];
   // String output = array[1];
@@ -30,8 +49,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    test();
-    arr();
+    // test();
+    // arr();
+    // set();
+    map();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
