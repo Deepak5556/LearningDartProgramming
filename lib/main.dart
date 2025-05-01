@@ -1,4 +1,19 @@
 import 'package:flutter/material.dart';
+enum AnimalType {cat,dog,bunny}
+
+void testt(AnimalType animalname){
+  if(animalname == AnimalType.dog){
+    print("Its a dog");
+  }
+  else if(animalname == AnimalType.cat){
+    print("It's a cat");
+  }
+  else{
+    print("It's a bunny");
+  }
+
+}
+
 void nullsafety3(List <String>? list){
   if(list!=null){
     print(list.length);
@@ -91,7 +106,8 @@ class MyApp extends StatelessWidget {
     // map();
     // nullsafety();
     // nullsafety2();
-    nullsafety3(null);
+    testt(AnimalType.dog);
+    // nullsafety3(null);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
