@@ -1,4 +1,40 @@
 import 'package:flutter/material.dart';
+void nullsafety3(List <String>? list){
+  if(list!=null){
+    print(list.length);
+  }
+  else{
+    print("No length Found");
+  }
+}
+
+void nullsafety2() {
+  String? FirstName = null;
+  String? MiddleFirstName = null;
+  String? LastName = 'Kumar';
+
+  if(FirstName !=null){
+    print("First name is Not null and the name is $FirstName");
+  }
+  else if(MiddleFirstName !=null){
+    print("First name is  null and the Middle name is $MiddleFirstName");
+  }
+  
+  else{
+    print("First and Middle name is Not null and the Last name is $LastName");
+  }
+}
+
+void nullsafety() {
+  String? name = null;
+  int? age = 20;
+  print(name);
+  print(age);
+  name = 'Deepak';
+  age = null;
+  print(age);
+  print(name);
+}
 
 void map() {
   final person = {
@@ -52,7 +88,10 @@ class MyApp extends StatelessWidget {
     // test();
     // arr();
     // set();
-    map();
+    // map();
+    // nullsafety();
+    // nullsafety2();
+    nullsafety3(null);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
