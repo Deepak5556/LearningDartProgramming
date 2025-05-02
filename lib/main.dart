@@ -1,24 +1,58 @@
 import 'package:flutter/material.dart';
-enum AnimalType {cat,dog,bunny}
 
-void testt(AnimalType animalname){
-  if(animalname == AnimalType.dog){
-    print("Its a dog");
-  }
-  else if(animalname == AnimalType.cat){
-    print("It's a cat");
-  }
-  else{
-    print("It's a bunny");
-  }
+enum AnimalType { cat, dog, bunny }
 
+class Peerson {
+  final String name;
+  Peerson(this.name);
 }
 
-void nullsafety3(List <String>? list){
-  if(list!=null){
-    print(list.length);
+void ttestt(){
+  final foo = Peerson('Deepak');
+  print(foo.name);
+}
+
+class Person {
+  void run() {
+    print("Running");
   }
-  else{
+
+  void breathing() {
+    print("Beathing");
+  }
+}
+
+void classobject() {
+  final person = Person();
+  person.run();
+  person.breathing();
+}
+
+void swichtest(AnimalType animalname) {
+  switch (animalname) {
+    case AnimalType.bunny:
+      print("bunny");
+    case AnimalType.dog:
+      print('Dog');
+    case AnimalType.cat:
+      print('cat');
+  }
+}
+
+void testt(AnimalType animalname) {
+  if (animalname == AnimalType.dog) {
+    print("Its a dog");
+  } else if (animalname == AnimalType.cat) {
+    print("It's a cat");
+  } else {
+    print("It's a bunny");
+  }
+}
+
+void nullsafety3(List<String>? list) {
+  if (list != null) {
+    print(list.length);
+  } else {
     print("No length Found");
   }
 }
@@ -28,14 +62,11 @@ void nullsafety2() {
   String? MiddleFirstName = null;
   String? LastName = 'Kumar';
 
-  if(FirstName !=null){
+  if (FirstName != null) {
     print("First name is Not null and the name is $FirstName");
-  }
-  else if(MiddleFirstName !=null){
+  } else if (MiddleFirstName != null) {
     print("First name is  null and the Middle name is $MiddleFirstName");
-  }
-  
-  else{
+  } else {
     print("First and Middle name is Not null and the Last name is $LastName");
   }
 }
@@ -106,8 +137,11 @@ class MyApp extends StatelessWidget {
     // map();
     // nullsafety();
     // nullsafety2();
-    testt(AnimalType.dog);
     // nullsafety3(null);
+    // testt(AnimalType.dog);
+    // swichtest(AnimalType.cat);
+    // classobject();
+    ttestt();
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -157,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
+      // changed in +this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
